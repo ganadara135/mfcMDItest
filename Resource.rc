@@ -1,0 +1,87 @@
+﻿//--------------------------------------------------------------------------------
+// pull in MFC’s built-in IDs (ID_APP_EXIT, ID_FILE_NEW, etc.)
+#include <afxres.h>
+
+// your own resource ID defs
+#include "resource.h"
+
+#ifdef APSTUDIO_INVOKED
+
+1 TEXTINCLUDE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+	"#include ""winres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+	"\r\n"
+	"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// ICONS
+// first icon is the application icon
+//IDI_APP_ICON    ICON        "res\\MyApp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+// BITMAPS
+//IDB_TOOLBAR     BITMAP      "res\\MyToolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+// TOOLBARS
+IDR_SAMPLE TOOLBAR 16, 15
+BEGIN
+	BUTTON      ID_FILE_NEW
+	BUTTON      ID_FILE_OPEN
+	BUTTON      ID_FILE_SAVE
+	SEPARATOR
+	BUTTON      ID_APP_EXIT
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// MENUS
+IDR_SAMPLE   MENU
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N", ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O", ID_FILE_OPEN
+		MENUITEM "&Save\tCtrl+S", ID_FILE_SAVE
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit", ID_APP_EXIT
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About...", ID_APP_ABOUT
+	END
+END
+
+
+IDR_SAMPLE ACCELERATORS
+BEGIN
+// 빈 가속기 – 나중에 원하시면 Ctrl+N 등 추가
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+// STRINGTABLE
+
+
+STRINGTABLE
+BEGIN
+	IDR_SAMPLE	"SampleDoc\nSample\nSample\nSample Data File (*.smp)\n.smp\nSampleDoc.Document\nSampleDoc Document"
+	//IDR_SAMPLE		"\nMFCMDItest\nMFCMDItest\n\n\nMFCMDItest.Document\nMFCMDItest.Document"
+	//IDR_SAMPLE		"AAA"
+END
+
+
+
+
